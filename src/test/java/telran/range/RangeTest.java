@@ -1,8 +1,8 @@
 package telran.range;
 
-import static org.junit.jupiter.api.Assertions.assertThrowsExactly;
+import static org.junit.jupiter.api.Assertions.*;
+
 import org.junit.jupiter.api.Test;
-import org.w3c.dom.ranges.Range;
 
 import telran.range.exceptions.OutOfRangeMaxValueException;
 import telran.range.exceptions.OutOfRangeMinValueException;

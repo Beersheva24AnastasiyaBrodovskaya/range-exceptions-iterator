@@ -3,7 +3,7 @@ package telran.range;
 import telran.range.exceptions.OutOfRangeMaxValueException;
 import telran.range.exceptions.OutOfRangeMinValueException;
 
-public class RangeExceptionsProcessor {
+public class RangeProcessor {
     private Range range;
     private int counterOfGreaterMax;
     private int counterOfLessMin;
