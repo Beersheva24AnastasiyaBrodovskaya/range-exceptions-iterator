@@ -1,6 +1,7 @@
 package telran.range;
 
 import java.util.Iterator;
+import java.util.NoSuchElementException;
 import java.util.function.Predicate;
 
 import telran.range.exceptions.OutOfRangeMaxValueException;
@@ -58,13 +59,15 @@ public class Range implements Iterable<Integer> {
         @Override
         public Integer next() {
             //TODO
+            if (!hasNext()) {
+                throw new NoSuchElementException();
+            }
             int res;
-            while (!localPredicate.test(current)) {
+            while (!localPredicate.test(current) && (current <= max)) {
                 current++;
             }
-            res = current;
-            current++;
-            return res;
+
+            return current++;
 
         }
 
